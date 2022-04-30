@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <title>Dados COVID-19</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="main">
+        <div class="header">
+          <h2>Quadro de dados - COVID19</h2>
+        </div>
+        <label for="nome">Informe um CEP para buscar informações:</label>
+        <input type="text" name="cep" class="cep" id="cep" data-js="cep" />
+        <button onclick="buscauf()" id="button">Pesquisar</button>
+      </section>
+      <section>
+        <table id="data-table">
+          <thead>
+            <tr>
+              <th>UF</th>
+              <th>Estado</th>
+              <th>Casos</th>
+              <th>Mortos</th>
+              <th>Suspeitos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Prrenchido via JS -->
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <script src="./src/js/main.js"></script>
+  </body>
+</html>
