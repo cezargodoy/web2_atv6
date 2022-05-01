@@ -1,4 +1,4 @@
-////////////////////////       Validação do CEP     ////////////////////////////
+//*Checar o CEP* 
 let Masks = {
     cep(value) {
       return value
@@ -19,8 +19,8 @@ let Masks = {
     );
   });
   
-  ////////////////////////////////////////////////////////////////////////////////
-  ////////////////////////     JSON            //////////////////////////////////
+  // banco de dados semiestruturado JSON
+  //API CEP
   function buscauf() {
     cepNumber = cep.value.replace(/\D/g, '');
     url = 'https://viacep.com.br/ws/' + cepNumber + '/json';
@@ -32,6 +32,8 @@ let Masks = {
         return buscaCovid(data.uf);
       });
   }
+
+  //API DADOS COVID19
   function buscaCovid(uf) {
     url = 'https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/' + uf;
     fetch(url)
